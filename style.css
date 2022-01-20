@@ -1,0 +1,9 @@
+.my-block{
+    width: 350px;
+    height: 350px;
+    border: 2px solid black;
+}
+
+.bg-darkred{
+    background-color: darkred;
+}

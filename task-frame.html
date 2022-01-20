@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task frame</title>
+    <link rel="stylesheet" href="task-frame.css">
+</head>
+<body>
+<div id="outside" class="outer-frame">
+    <button id="open-button">Open modal</button>
+    <div id="modal-window" class="modal-container">
+        <span id="close-button" class="close">&times;</span>
+        <div class="modal-header">
+            <h4>-Хотите перезвоним вам за <span>28</span> секунд?</h4>
+        </div>
+        <div class="modal-body">
+            <input type="number" placeholder="+7">
+            <button id="btnStart">Жду звонка</button>
+        </div>
+        <div class="modal-footer">
+            <h1 id="second">28</h1>
+            <span class="span-block">Свободных операторов на линии: 10</span>
+            <span class="span-block">В процессе разговора с клиентами: 15</span>
+        </div>
+    </div>
+</div>
+
+<script src="task-frame.js"></script>
+</body>
+</html>
