@@ -1,10 +1,10 @@
 
 .modal-container{
     display: none;
-    width: 420px;
-    height: 300px;
-    border-radius: 30px;
-    background-color: #11283a;
+    width: 410px;
+    height: 385px;
+    border-radius: 9px;
+    background-color: #061f3e;
     position: relative;
     z-index: 2;
     animation-name: animate;
@@ -13,7 +13,7 @@
 
 @keyframes animate {
     0%{
-        top: -10px;
+        top: -200px;
         opacity: 0
     }
     100%{
@@ -38,8 +38,11 @@
     border-radius: 10px;
     background-color: #f7bc26;
 }
+#btnStart:hover{
+    cursor: pointer;
+}
 
-h1, h4, span{
+h2, h4, span{
     color: whitesmoke;
 }
 span, .close{
@@ -49,10 +52,15 @@ span, .close{
     display: block;
 }
 
+.modal-header img{
+    width: 60px;
+    height: 60px;
+}
 .close{
     color: #86b7fe;
     float: right;
     font-size: 29px;
+    padding-right: 5px;
 }
 .close:hover{
     color: #ffc107;
