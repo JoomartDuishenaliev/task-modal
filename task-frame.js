@@ -21,9 +21,9 @@ window.onclick = function (event) {
 //***** timer ******//
 let count = 27;
 let mss = 59;
-const sElem = document.querySelector('#s');
 const ms = document.querySelector('#ms');
 
+const sElem = document.querySelector('#s');
 sElem.textContent = count;
 
 const startElem = document.querySelector('#btnStart');
@@ -32,13 +32,13 @@ const startElem = document.querySelector('#btnStart');
 function countSequence() {
     ms.textContent = mss--;
     if (mss === 0) {
-        mss.textContent = '0' + mss;
+        mss === 59;
+        count--;
     }
 }
 
 function start () {
     sElem.textContent = count--;
-}
 
 startElem.onclick = function () {
     setInterval(start, 1000);
