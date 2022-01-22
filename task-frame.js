@@ -18,29 +18,35 @@ window.onclick = function (event) {
 }
 
 
-//***** timer ******//
-let count = 27;
-let mss = 59;
-const ms = document.querySelector('#ms');
+let seconds = 27;
+let milliseconds = 59;
+const appendMilliseconds = document.querySelector('#milliseconds');
+const appendSeconds = document.querySelector('#seconds');
+const startButton = document.querySelector('#btnStart');
+let interval;
 
-const sElem = document.querySelector('#s');
-sElem.textContent = count;
-
-const startElem = document.querySelector('#btnStart');
-
-
-function countSequence() {
-    ms.textContent = mss--;
-    if (mss === 0) {
-        mss === 59;
-        count--;
+function countdown () {
+    milliseconds--;
+    appendMilliseconds.innerHTML = milliseconds
+    if(milliseconds === 0) {
+        seconds--;
+        appendSeconds.innerHTML = seconds;
+        milliseconds = 59;
+        appendMilliseconds.innerHTML = milliseconds
+    }
+    if(seconds === 0) {
+        milliseconds--;
+        appendMilliseconds.innerHTML = milliseconds
+    }
+    if(milliseconds === 0 && seconds === 0) {
+        clearInterval(interval);
+        startButton.onclick = function () {
+            clearInterval(interval);
+        }
     }
 }
 
-function start () {
-    sElem.textContent = count--;
-
-startElem.onclick = function () {
-    setInterval(start, 1000);
-    setInterval(countSequence, 10);
+startButton.onclick = function () {
+    clearInterval(interval);
+    interval = setInterval(countdown, 20);
 }
